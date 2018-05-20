@@ -1,24 +1,30 @@
+"""
+
+"""
 import scrapy
 import json
 import re
 import operator
 
-import os.path
-path = os.path.abspath(__file__)
-
-import sys
-sys.path.append('../../../')
-from utils import read_playlist
+from blacknet.utils import read_playlist
 
 UG_LOOKUP_URL = 'https://www.ultimate-guitar.com/search.php?search_type=title&value='
 UG_URL_JOIN = '%20'
-
 UG_SEARCH_REGEX = re.compile("store.page = (\{.*\});")
 
 class UltimateGuitarSpider(scrapy.Spider):
+    """
+
+    """
     name = "UltimateGuitar"
 
     def __init__(self, playlist='posthardcore', *args, **kwargs):
+        """
+
+        :param playlist:
+        :param args:
+        :param kwargs:
+        """
         super(UltimateGuitarSpider, self).__init__(*args, **kwargs)
         self.playlist_df = read_playlist(playlist)
 
@@ -56,7 +62,6 @@ class UltimateGuitarSpider(scrapy.Spider):
             best_pro = sorted(sort_on, key=operator.itemgetter(0))[-1]
             meta = {**meta, **(best_pro[1])}
             url = meta['tab_url']
-            #yield scrapy.Request(url=url, callback=self.parse_tab, meta=meta)
 
             yield meta
 

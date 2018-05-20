@@ -108,7 +108,9 @@ venv.bak/
 
 # data
 *.csv
-playlists/*
+data/playlists/*
+data/scraped/*
+data/downloaded/*
 
 # jupyter
 .idea
