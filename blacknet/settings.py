@@ -18,3 +18,14 @@ GUITARPRO_DIR = os.path.join(DATA_DIR, 'downloaded')
 
 CHROMEDRIVER_PATH = os.path.join(PROJECT_DIR, 'chromedriver')
 
+
+#### SCRAPY settings
+BOT_NAME = 'GuitarProScraper'
+
+SPIDER_MODULES = ['blacknet.GuitarProScraper.spiders']
+NEWSPIDER_MODULE = 'blacknet.GuitarProScraper.spiders'
+
+ROBOTSTXT_OBEY = True
+
+FEED_FORMAT = 'csv'
+

@@ -3,8 +3,10 @@ from selenium import webdriver
 
 import os
 import os.path
-import blacknet.settings as s
-from blacknet.utils import check_if_exists_or_create
+from .. import (
+    settings as s,
+    utils as u
+)
 
 import pandas as pd
 
@@ -56,7 +58,7 @@ def download_files(playlist_csv, sleep_time=0, max_download=None, download_dir=F
             download_dir = s.GUITARPRO_DIR
         nm = os.path.basename(playlist_csv).split('.')[0]
         output_dir = os.path.join(download_dir, nm)
-        check_if_exists_or_create(output_dir)
+        u.check_if_exists_or_create(output_dir)
 
         for fn in new_downloads:
             os.rename(os.path.join(s.DOWNLOADS_DIR, fn), os.path.join(output_dir, fn))

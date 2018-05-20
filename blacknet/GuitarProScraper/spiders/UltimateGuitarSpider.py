@@ -6,11 +6,11 @@ import json
 import re
 import operator
 
-from blacknet.utils import read_playlist
-
 UG_LOOKUP_URL = 'https://www.ultimate-guitar.com/search.php?search_type=title&value='
 UG_URL_JOIN = '%20'
 UG_SEARCH_REGEX = re.compile("store.page = (\{.*\});")
+
+from ...utils import read_playlist
 
 class UltimateGuitarSpider(scrapy.Spider):
     """
