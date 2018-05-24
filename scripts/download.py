@@ -1,4 +1,15 @@
 import argparse
+import sys
+import os
+
+# add project root directory to path so package can be found
+sys.path.append(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+        )
+    )
+)
 
 from blacknet.GuitarProScraper.download import download_files
 

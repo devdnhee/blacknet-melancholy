@@ -29,7 +29,7 @@ Installation:
 	-> all python script with argparse 
 4. documentation
 
-## 21/05
+## 20/05
 
 ### Done
 1. reset project setup:
@@ -49,3 +49,30 @@ Installation:
 2. Annoying pop up about GDPR shows up when going to a tab url for the first time (without cookie), hotfixed in `blacknet.GuitarProScraper.download.py`
 
 ### TODO
+1. reading guitarpro files:
+    - EASY: .gp3, .gp4, .gp5 -> with PyGuitarPro pkg
+    - DIFFICULT: .gpx -> C package MuseScore: https://github.com/musescore/MuseScore
+        - package mscore
+        - extend with native C++ code: https://docs.python.org/3.6/extending/extending.html
+    - parse to midi => that way we can continue from there one (and extendible to other formats)
+2. link to gp filename in DataFrame (in `blacknet.GuitarProScraper.download`)
+3. normalize filenames
+
+## 21/05
+-> use musescore = c++ application -> gp to midi
+
+### Building and compiling musescore
+1. compilation ix: https://musescore.org/en/handbook/developers-handbook/compilation/compile-instructions-macos-git
+   
+Install Xcode
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install libogg libsndfile libvorbis pkg-config portaudio jack lame cmake git
+```
+Install Qt 5.9
+
+## BUGS
+
+### 21/05
+- csv export of scraper -> adds rows instead of rewriting
+- exception handling when driving chrome and clicking does not work
