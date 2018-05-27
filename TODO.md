@@ -69,7 +69,36 @@ Install Xcode
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install libogg libsndfile libvorbis pkg-config portaudio jack lame cmake git
 ```
-Install Qt 5.9
+Install Qt 5.9! Later installments are NOT compatible with MuseScore. 
+
+## 25/05
+Developer handbook for MuseScore (not so much with it to do everything in reasonable time span):
+- https://musescore.org/en/handbook/developers-handbook
+- https://musescore.org/en/handbook
+
+Creating shared object from Qt project:
+https://wiki.qt.io/How_to_create_a_library_with_Qt_and_use_it_in_an_application
+
+How to use it?
+1. make a .so file of whole Qt project
+2. make new .cpp code calling the right functions from the MuseScore library (looks damn hard :( )
+3. Convert all guitar pro files to midi in cpp code
+
+TODO:
+1. Qt tutorial
+2. Some .cpp refresher (so long ago...)
+3. create .so
+4. Cython -> use .so
+
+Other way to do it:
+Parse everything myself in python code
+-> read functions in musescore/importgtp.cpp
+
+## 27/05
+New strategy (again...) after all research done:
+1. transform .gp3, .gp4, .gp5 to .mid with guitarpro library
+2. Create model with these
+3. add .gpx support by making new C++ library supporting this, wrap C++ code
 
 ## BUGS
 
