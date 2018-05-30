@@ -100,6 +100,9 @@ New strategy (again...) after all research done:
 2. Create model with these
 3. add .gpx support by making new C++ library supporting this, wrap C++ code
 
+## 30/05
+wrote first utility functions in new python package `blacknet.converter`
+
 ## BUGS
 
 ### 21/05

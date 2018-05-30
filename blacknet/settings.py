@@ -15,6 +15,7 @@ PLAYLIST_DIR = os.path.join(DATA_DIR, 'playlists')
 SCRAPED_DIR = os.path.join(DATA_DIR, 'scraped')
 DOWNLOADS_DIR = os.path.expanduser("~/Downloads")
 GUITARPRO_DIR = os.path.join(DATA_DIR, 'downloaded')
+MIDI_DIR = os.path.join(DATA_DIR, 'midi')
 
 CHROMEDRIVER_PATH = os.path.join(PROJECT_DIR, 'chromedriver')
 
