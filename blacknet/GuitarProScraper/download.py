@@ -50,7 +50,8 @@ def download_files(playlist_csv, sleep_time=0, max_download=None, download_dir=F
             if is_first:
                 try:
                     # TODO: more robust way to find this pop up
-                    button = driver.find_element_by_class_name('_1jouB')
+                    #button = driver.find_element_by_class_name('_1jouB')
+                    button = driver.find_element_by_xpath("//*[contains(text(), 'Got it, thanks')]")
                     button.click()
 
                 except :

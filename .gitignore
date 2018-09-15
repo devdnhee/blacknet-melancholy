@@ -110,6 +110,7 @@ venv.bak/
 *.csv
 data/playlists/*
 data/scraped/*
+data/*
 data/downloaded/*
 
 # jupyter

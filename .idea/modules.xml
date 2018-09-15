@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/blacknet-melancholy.iml" filepath="$PROJECT_DIR$/.idea/blacknet-melancholy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sonic/contest_reinforcement_learning/.idea/contest_reinforcement_learning.iml" filepath="$PROJECT_DIR$/../sonic/contest_reinforcement_learning/.idea/contest_reinforcement_learning.iml" />
     </modules>
   </component>
 </project>

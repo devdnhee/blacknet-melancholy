@@ -103,6 +103,12 @@ New strategy (again...) after all research done:
 ## 30/05
 wrote first utility functions in new python package `blacknet.converter`
 
+
+## 14/09
+Damn it has been way too long...
+
+TODO: write automatic reports when scraping, downloading, ...
+
 ## BUGS
 
 ### 21/05
